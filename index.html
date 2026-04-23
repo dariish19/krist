@@ -181,14 +181,14 @@
               </template>
             </div>
 
-            <a href="#bestseller" class="mt-8 inline-flex items-center gap-3 rounded-md bg-dark px-6 py-3 text-sm font-medium text-white transition hover:bg-black">
+            <a href="#" class="mt-8 inline-flex items-center gap-3 rounded-md bg-dark px-6 py-3 text-sm font-medium text-white transition hover:bg-black">
               View All Products
               <span>→</span>
             </a>
           </div>
 
           <div class="relative min-h-[420px] bg-[#efefef]">
-            <div class="absolute inset-y-0 right-[14%] w-[24%] bg-[#ef476f]"></div>
+            <!-- <div class="absolute inset-y-0 right-[14%] w-[24%] bg-[#ef476f]"></div> -->
             <img
               src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
               class="absolute bottom-0 left-1/2 z-10 h-[390px] w-auto -translate-x-1/2 object-contain md:h-[430px]"
@@ -198,148 +198,8 @@
       </div>
     </section>
 
-    <section id="reviews" class="bg-[#f7f7f7] py-16 md:py-20">
-      <div class="container-page">
-        <div class="mb-8 flex items-center justify-between gap-4">
-          <h2 class="text-[34px] font-medium tracking-[-0.02em]">What our Customer say’s</h2>
-          <div class="flex items-center gap-3">
-            <button class="arrow-btn">←</button>
-            <button class="arrow-btn">→</button>
-          </div>
-        </div>
 
-        <div class="grid gap-6 lg:grid-cols-3">
-          <template x-for="review in reviews" :key="review.name">
-            <article class="rounded-sm bg-white p-7 shadow-sm">
-              <div class="mb-5 text-[#f6b400]">★★★★★</div>
-              <p class="text-[14px] leading-7 text-zinc-600" x-text="review.text"></p>
-              <div class="mt-7 flex items-center gap-3">
-                <img :src="review.avatar" :alt="review.name" class="h-11 w-11 rounded-full object-cover">
-                <div>
-                  <div class="font-semibold" x-text="review.name"></div>
-                  <div class="text-sm text-zinc-500" x-text="review.role"></div>
-                </div>
-              </div>
-            </article>
-          </template>
-        </div>
-      </div>
-    </section>
 
-    <section id="instagram" class="py-18 md:py-20">
-      <div class="container-page">
-        <h2 class="mb-10 text-center text-[38px] font-medium tracking-[-0.02em]">Our Instagram Stories</h2>
-
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <template x-for="item in instagram" :key="item.image">
-            <article class="group relative overflow-hidden">
-              <img :src="item.image" class="h-[250px] w-full object-cover transition duration-300 group-hover:scale-105">
-              <div x-show="item.play" class="absolute inset-0 flex items-center justify-center">
-                <div class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-xl shadow-lg">▶</div>
-              </div>
-            </article>
-          </template>
-        </div>
-
-        <div class="mt-14 grid gap-8 border-b border-line pb-14 md:grid-cols-2 lg:grid-cols-4">
-          <div class="flex gap-4">
-            <div class="text-2xl">📦</div>
-            <div>
-              <h3 class="font-semibold">Free Shipping</h3>
-              <p class="mt-1 text-sm text-zinc-500">Free shipping for order above $150</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="text-2xl">💰</div>
-            <div>
-              <h3 class="font-semibold">Money Guarantee</h3>
-              <p class="mt-1 text-sm text-zinc-500">Within 30 days for an exchange</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="text-2xl">🎧</div>
-            <div>
-              <h3 class="font-semibold">Online Support</h3>
-              <p class="mt-1 text-sm text-zinc-500">24 hours a day, 7 days a week</p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="text-2xl">💳</div>
-            <div>
-              <h3 class="font-semibold">Flexible Payment</h3>
-              <p class="mt-1 text-sm text-zinc-500">Pay with multiple credit cards</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="bg-dark-2 text-white">
-    <div class="container-page py-14 md:py-16">
-      <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
-        <div>
-          <a href="#" class="text-[24px] font-semibold tracking-tight">K<span class="inline-block -translate-x-1">K</span>rist</a>
-          <ul class="mt-8 space-y-4 text-sm text-zinc-300">
-            <li>(704) 555-0127</li>
-            <li>krist@example.com</li>
-            <li>3891 Ranchview Dr. Richardson,<br>California 62639</li>
-          </ul>
-
-          <div class="mt-8 flex gap-2">
-            <span class="rounded bg-white px-2 py-1 text-xs text-black">VISA</span>
-            <span class="rounded bg-white px-2 py-1 text-xs text-black">MC</span>
-            <span class="rounded bg-white px-2 py-1 text-xs text-black">AMEX</span>
-            <span class="rounded bg-white px-2 py-1 text-xs text-black">PAY</span>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="text-sm font-semibold text-white/90">Information</h3>
-          <ul class="mt-6 space-y-4 text-sm text-zinc-300">
-            <li><a href="#" class="hover:text-white">My Account</a></li>
-            <li><a href="#" class="hover:text-white">Login</a></li>
-            <li><a href="#" class="hover:text-white">My Cart</a></li>
-            <li><a href="#" class="hover:text-white">My Wishlist</a></li>
-            <li><a href="#" class="hover:text-white">Checkout</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-sm font-semibold text-white/90">Service</h3>
-          <ul class="mt-6 space-y-4 text-sm text-zinc-300">
-            <li><a href="#" class="hover:text-white">About Us</a></li>
-            <li><a href="#" class="hover:text-white">Careers</a></li>
-            <li><a href="#" class="hover:text-white">Delivery Information</a></li>
-            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-sm font-semibold text-white/90">Subscribe</h3>
-          <p class="mt-6 max-w-[320px] text-sm leading-7 text-zinc-300">
-            Enter your email below to be the first to know about new collections and product launches.
-          </p>
-
-          <form class="mt-6 flex max-w-[340px] items-center gap-3 rounded-lg border border-white/15 px-4 py-3">
-            <span class="text-zinc-400">✉</span>
-            <input type="email" placeholder="Your Email" class="w-full bg-transparent text-sm text-white outline-none placeholder:text-zinc-500">
-            <button type="submit" class="text-lg text-white">→</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="mt-12 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-8 text-sm text-zinc-400 md:flex-row">
-        <p>©2023 Krist All Rights are reserved</p>
-        <div class="flex items-center gap-4 text-white">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script>
     function storePage() {
